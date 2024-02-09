@@ -1,0 +1,267 @@
+@charset "UTF-8";
+/*Regular*/
+@font-face {
+  font-family: "TT Lakes";
+  font-weight: 400;
+  font-style: normal;
+  src: local("TT Lakes"), url(../assets/fonts/TTLakes-Regular.woff2) format("woff2"), url(//assets/fonts/TTLakes-Regular.woff) format("woff");
+}
+/*Medium*/
+@font-face {
+  font-family: "TT Lakes";
+  font-weight: 500;
+  font-style: normal;
+  src: local("TT Lakes"), url(../assets/fonts/TTLakes-Medium.woff2) format("woff2"), url(//assets/fonts/TTLakes-Medium.woff) format("woff");
+}
+/*Bold*/
+@font-face {
+  font-family: "TT Lakes";
+  font-weight: 700;
+  font-style: normal;
+  src: local("TT Lakes"), url(../assets/fonts/TTLakes-Bold.woff2) format("woff2"), url(//assets/fonts/TTLakes-Bold.woff) format("woff");
+}
+/*Обнуление*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+  background-color: transparent;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+/*--------------------*/
+:root {
+  --dark: #1b1c21;
+}
+
+body {
+  font-family: "TT Lakes", sans-serif;
+  background: #f8f8f8;
+  font-family: "TT Lakes";
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+}
+
+.out {
+  position: relative;
+  height: 100vh;
+}
+
+.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.sidebar {
+  width: 320px;
+  height: 100%;
+  box-shadow: 16px 0 52px 0 rgba(14, 24, 80, 0.2), -2px 0 4px 0 rgba(69, 79, 126, 0.02);
+  background-color: #ffffff;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.sidebar::-webkit-scrollbar {
+  width: 0;
+}
+.sidebar__logo {
+  width: 97px;
+  height: 51px;
+  background: url(../assets/svg/logo.svg);
+  margin-right: 62px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+.sidebar__logo:hover {
+  opacity: 0.7;
+}
+.sidebar__inner {
+  height: 100%;
+  padding-top: 24px;
+  padding-left: 24px;
+  padding-bottom: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.sidebar__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 16px;
+  margin-bottom: 45px;
+}
+.sidebar__btn-group {
+  display: flex;
+  gap: 16px;
+  margin: 16px 0;
+}
+.sidebar__footer a {
+  display: block;
+  color: var(--dark);
+  transition: 0.3s ease;
+}
+.sidebar__footer a:hover {
+  opacity: 0.7;
+}
+.sidebar .e-mail {
+  margin-bottom: 12px;
+}
+.sidebar .tel {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+.sidebar .lang {
+  display: flex;
+  gap: 7px;
+}
+.sidebar .lang__item {
+  font-family: "TT Lakes";
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  transition: 0.3s ease;
+}
+.sidebar .lang__item:hover {
+  opacity: 0.7;
+}
+.sidebar .lang__item--active {
+  opacity: 0.7;
+}
+
+.btn-rounded {
+  width: 40px;
+  height: 40px;
+  background-repeat: no-repeat;
+  transition: 0.3s ease;
+}
+.btn-rounded:hover {
+  opacity: 0.7;
+}
+
+.nav__list {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.nav__item {
+  position: relative;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.nav__item:hover {
+  opacity: 0.7;
+}
+.nav__link {
+  color: var(--dark);
+}
+.nav__link--active {
+  opacity: 0.7;
+}
+.nav__link--active::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 8px;
+  height: 32px;
+  left: -28px;
+  top: -4px;
+  background-color: #41f6d7;
+  border-radius: 20px;
+}
+
+.closed {
+  background: url(../assets/svg/closed.svg);
+}
+
+.search {
+  background: url(../assets/svg/search.svg);
+}
+
+.phone {
+  background: url(../assets/svg/phone.svg);
+}
+
+.chat {
+  background: url(../assets/svg/chat.svg);
+}
+
+.profile {
+  background: url(../assets/svg/profile.svg);
+}
